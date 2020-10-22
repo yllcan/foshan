@@ -1,0 +1,1185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+    <meta name="description" content=""/>
+    <title>岭南味 佛山品</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/fullpage.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <style>
+        #loading{
+            background-color: #db9e36;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 99999;
+            margin-top: 0px;
+            top: 0px;
+        }
+        #loading-center{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #loading-center-absolute {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 150px;
+            width: 150px;
+            margin-top: -75px;
+            margin-left: -75px;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .object{
+            width: 20px;
+            height: 20px;
+            background-color:#FFF;
+            position: absolute;
+            left: 65px;
+            top: 65px;
+        }
+        .object:nth-child(2n+0) {
+            margin-right: 0px;
+        }
+        #object_one {
+            -webkit-animation: object_one 2s infinite;
+            animation: object_one 2s infinite;
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+        #object_two {
+            -webkit-animation: object_two 2s infinite;
+            animation: object_two 2s infinite;
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+        #object_three {
+            -webkit-animation: object_three 2s infinite;
+            animation: object_three 2s infinite;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+        #object_four {
+            -webkit-animation: object_four 2s infinite;
+            animation: object_four 2s infinite;
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+        #object_five {
+            -webkit-animation: object_five 2s infinite;
+            animation: object_five 2s infinite;
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+        #object_six {
+            -webkit-animation: object_six 2s infinite;
+            animation: object_six 2s infinite;
+            -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+        }
+        #object_seven {
+            -webkit-animation: object_seven 2s infinite;
+            animation: object_seven 2s infinite;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+        }
+        #object_eight {
+            -webkit-animation: object_eight 2s infinite;
+            animation: object_eight 2s infinite;
+            -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+        }
+        #object_big{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 50px;
+            top: 50px;
+            -webkit-animation: object_big 2s infinite;
+            animation: object_big 2s infinite;
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+        @-webkit-keyframes object_big {
+            50% { -webkit-transform: scale(0.5); }
+        }
+        @keyframes object_big {
+            50% {
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+            }
+        }
+        @-webkit-keyframes object_one {
+            50% { -webkit-transform: translate(-65px,-65px)  ; }
+        }
+        @keyframes object_one {
+            50% {
+                transform: translate(-65px,-65px) ;
+                -webkit-transform: translate(-65px,-65px) ;
+            }
+        }
+        @-webkit-keyframes object_two {
+            50% { -webkit-transform: translate(0,-65px) ; }
+        }
+        @keyframes object_two {
+            50% {
+                transform: translate(0,-65px) ;
+                -webkit-transform: translate(0,-65px) ;
+            }
+        }
+        @-webkit-keyframes object_three {
+            50% { -webkit-transform: translate(65px,-65px) ; }
+        }
+        @keyframes object_three {
+            50% {
+                transform: translate(65px,-65px) ;
+                -webkit-transform: translate(65px,-65px) ;
+            }
+        }
+        @-webkit-keyframes object_four {
+
+            50% { -webkit-transform: translate(65px,0) ; }
+
+        }
+        @keyframes object_four {
+            50% {
+                transform: translate(65px,0) ;
+                -webkit-transform: translate(65px,0) ;
+            }
+        }
+        @-webkit-keyframes object_five {
+
+            50% { -webkit-transform: translate(65px,65px) ; }
+        }
+        @keyframes object_five {
+            50% {
+                transform: translate(65px,65px) ;
+                -webkit-transform: translate(65px,65px) ;
+            }
+        }
+
+        @-webkit-keyframes object_six {
+            50% { -webkit-transform: translate(0,65px) ; }
+        }
+
+        @keyframes object_six {
+            50% {
+                transform:  translate(0,65px) ;
+                -webkit-transform:  translate(0,65px) ;
+            }
+        }
+        @-webkit-keyframes object_seven {
+            50% { -webkit-transform: translate(-65px,65px) ; }
+        }
+        @keyframes object_seven {
+            50% {
+                transform: translate(-65px,65px) ;
+                -webkit-transform: translate(-65px,65px) ;
+            }
+        }
+        @-webkit-keyframes object_eight {
+            50% { -webkit-transform: translate(-65px,0) ;
+            }
+        @keyframes object_eight {
+            50% {
+                transform: translate(-65px,0) ;
+                -webkit-transform: translate(-65px,0) ;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
+</head>
+<body>
+
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_five"></div>
+            <div class="object" id="object_six"></div>
+            <div class="object" id="object_seven"></div>
+            <div class="object" id="object_eight"></div>
+            <div class="object" id="object_big"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="FSW">
+        <ul class="FSMenu">
+            <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+            <li data-menuanchor="page2"><a href="#page2">佛山<br>简介</a></li>
+            <li data-menuanchor="page3"><a href="#page3">佛山<br>好风光</a></li>
+            <li data-menuanchor="page4"><a href="#page4">佛山<br>醉美味</a></li>
+            <li data-menuanchor="page5"><a href="#page5">佛山<br>夜色</a></li>
+            <li data-menuanchor="page6"><a href="#page6">佛山<br>民俗</a></li>
+            <li data-menuanchor="page7"><a href="#page7">精品<br>线路</a></li>
+            <li data-menuanchor="page8"><a href="#page8">佛山<br>优选</a></li>
+        </ul>
+        <div id="FSMain">
+            <section class="FSBlock1 section">
+                <img src="img/block1.jpg" alt="">
+            </section>
+            <section class="section">
+                <div class="FSBlock2">
+                    <div class="titW">
+                        <img src="img/block2_title.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="videoW">
+                            <video
+                                    src="//video.c-ctrip.com/videos/AS0c1j000001hzx4zADB0.mp4"
+                                    poster="img/poster.png"
+                                    controls="controls"
+                                    controlsList="nodownload"
+                                    width="100%">
+                            </video>
+                        </div>
+                        <div class="botW">
+                            <img src="img/block1_bg.png" alt="" class="bg">
+                            <div class="flexW1">
+                                <div class="tit">
+                                    <img src="img/block1_tit2.png" alt="">
+                                </div>
+                                <div class="des">佛山地处珠江三角洲腹地，是中国重要的制造业基地、国家历史文化名城。毗邻港澳，是“粤港澳大湾区”“珠江-西江经济带”的重要组成部分。悠久的历史，孕育了佛山独具魅力的岭南传统文化，这里人文荟萃，才俊辈出，素有陶艺之乡、粤剧之乡、武术之城、广纱中心、岭南成药之乡、南方铸造中心、民间艺术之乡、美食之乡等美誉，形成了行通济、佛山秋色、扒龙舟等独具特色的民俗文化。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="prW">
+                            <img src="img/block1_bg2.png" alt="" class="bg">
+                            <div class="flexW">
+                                <div class="rightW">
+                                    <img class="map" src="img/block2_map01.png" alt="">
+                                    <img class="map" src="img/block2_map02.png" alt="">
+                                    <img class="map" src="img/block2_map03.png" alt="">
+                                    <img class="map" src="img/block2_map04.png" alt="">
+                                    <img class="map" src="img/block2_map05.png" alt="">
+                                </div>
+                                <div class="leftW">
+                                    <div class="slickW">
+                                        <div class="item">
+                                            <div class="imgW">
+                                                <img src="img/block2_03.jpg" alt="">
+                                            </div>
+                                            <div class="desc">
+                                                禅城区是佛山市五个行政辖区之一，也是由禅城、桂城、佛山新城组成的佛山市中心区“禅佳新”成员之一，是市政府的所在地，也是佛山的政治、经济和文化中心。禅城是著名的陶艺之乡、武术之乡、民间艺术之乡、更是岭南文化发源地之一和国家历史文化名城，密集地保存著八处历史文化街区，众多国家文物保护单位，以及非物质文化遗产。 
+
+                                            </div>
+                                            <a href="javascript:;" data-url="https://pages.c-ctrip.com/tbliu/2020/09/chancheng/h5/index.html" data-appurl="https://pages.c-ctrip.com/tbliu/2020/09/chancheng/h5/index.html" class="btn J_link">
+                                                <img class="btnBg" src="img/block2_btn.png" alt="">
+                                                <span>点击前往禅城区全域旅游体验馆</span>
+                                                </a>
+                                        </div>
+                                        <div class="item">
+                                            <div class="imgW">
+                                                <img src="img/block2_02.jpg" alt="">
+                                            </div>
+                                            <div class="desc">
+                                                南海是千年文化名城，早在六千年前，新石器时代的渔猎部落就以南粤名山——西樵山为基地，孕育了双肩石器文化，形成了珠江三角洲地区新石器时代的原始文明，考古学家称之为“西樵山文化”，被誉为珠江流域岭南文明的灯塔。西樵山清静幽雅的环境，不但汇聚历代文人雅士，还具有浓厚的宗教文化特色，历代佛、儒、道融于一山，和谐共处，相得益彰。 
+
+                                            </div>
+                                            <a href="javascript:;" data-url="https://you.ctrip.com/place/nanhaidistrict2015154.html" data-appurl="https://you.ctrip.com/place/nanhaidistrict2015154.html" class="btn J_link">
+                                                <img class="btnBg" src="img/block2_btn.png" alt="">
+                                                <span>打卡幸福南海</span>
+                                                </a>
+                                        </div>
+                                        <div class="item">
+                                            <div class="imgW">
+                                                <img src="img/block2_05.jpg" alt="">
+                                            </div>
+                                            <div class="desc">
+                                                顺德是一座极富岭南水乡风韵和独特人文风情的宜居城市，旅游资源丰富，广府文化、生态休闲、都市风光、岭南美食、特色产业交相辉映，拥有1个国家5A级旅游景区，5个4A级旅游景区，5个3A级旅游景区。顺德是粤菜重要的发源地，中国厨师之乡，全国首个“中国美食名城”，联合国教科文组织授予的“世界美食之都”。 
+                                            </div>
+                                            <a href="javascript:;" data-url="https://you.ctrip.com/place/shundedistrict120098.html" data-appurl="https://you.ctrip.com/place/shundedistrict120098.html" class="btn J_link">
+                                                <img class="btnBg" src="img/block2_btn.png" alt="">
+                                                <span>寻味顺德</span>
+                                                </a>
+                                        </div>
+                                        <div class="item">
+                                            <div class="imgW">
+                                                <img src="img/block2_04.jpg" alt="">
+                                            </div>
+                                            <div class="desc">
+                                                高明文化历史光辉灿烂，曾有“文风甲端郡”“彦硕辈出”的美誉，涌现出大量历史文化名人。目前全区6个重点旅游景区，其中2个为国家4A级旅游景区，1个为广东省工业旅游示范点，1个全国优选旅游项目。更有生态旅游景点和批红色旅游景点。近年来，高明区打造“绿博会”“旅博会”“瀨粉节”“油菜花节”“百村名菜争霸赛”等旅游节庆活动。高明区正打造成为“山林水共生、域产旅融合”的粵港澳大湾区重要生态休闲旅游目的地。
+                                            </div>
+                                            <a href="javascript:;" data-url="https://you.ctrip.com/place/gaomingdistrict2015162.html" data-appurl="https://you.ctrip.com/place/gaomingdistrict2015162.html" class="btn J_link">
+                                                <img class="btnBg" src="img/block2_btn.png" alt="">
+                                                <span>走进生态高明</span>
+                                                </a>
+                                        </div>
+                                        <div class="item">
+                                            <div class="imgW">
+                                                <img src="img/block2_01.jpg" alt="">
+                                            </div>
+                                            <div class="desc">
+                                                三水，因西江、北江、绥江三江在境内汇流而得名。三水自然风光优美，生态资源丰富，被评为“中国长寿之乡”、“中国饮料之都”。三水荷花世界、森林公园先后荣膺“国家4A级景区”的称号；大旗头古村、长岐古村等历史源远流长，文化底蕴深厚，是古韵悠悠的岭南文化之乡。
+                                            </div>
+                                            <a href="javascript:;" data-url="https://pages.c-ctrip.com/tbliu/2020/10/foshan/sanshui/h5/index.html" data-appurl="https://pages.c-ctrip.com/tbliu/2020/10/foshan/sanshui/h5/index.html" class="btn J_link">
+                                                <img class="btnBg" src="img/block2_btn.png" alt="">
+                                                <span>探秘湾区之源长寿胜地</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="FSBlock3">
+                    <div class="titW">
+                        <img src="img/block3_tit.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="wrap">
+                            <img src="img/block1_bg2.png" alt="" class="bg">
+                            <div class="tagW">
+                                <ul class="topW">
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/23210.html" data-appurl="https://you.ctrip.com/sight/foshan207/23210.html" class="imgW J_link">
+                                            <img src="img/block3_01.jpg" alt="">
+                                            <span class="des">西樵风景名胜区位于广东省佛山市南海区西南部，景区有清幽的自然胜景，历史悠久的文化。几千年的沧桑沉淀，凝练了西樵山丰富的石器文化、理学文化、宗教文化、龙狮和武术文化。西樵山还是一代武林宗师黄飞鸿的故乡，黄飞鸿狮艺武术文化已成为西樵山旅游的一大热点。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/76192.html" data-appurl="https://you.ctrip.com/sight/foshan207/76192.html" class="imgW J_link">
+                                            <img src="img/block3_02.jpg" alt="">
+                                            <span class="des">长鹿旅游休博园是国家5A级景区，是一个以岭南历史文化、顺德水乡风情、农家生活情趣为特色，集吃、住、玩、赏、娱、购于一体的综合性景区，由“长鹿度假村”、“机动游乐主题公园”、“水世界主题公园”、“农家乐主题公园”和“动物主题公园”等五大园区组成。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/23213.html" data-appurl="https://you.ctrip.com/sight/foshan207/23213.html" class="imgW J_link">
+                                            <img src="img/block3_03.jpg" alt="">
+                                            <span class="des">佛山祖庙位于佛山市中心，周边是繁华的商业区，交通非常方便。从广州过去可搭乘广佛地铁，在祖庙站下车即可。它从北宋元丰年间始建，之后逐渐成为一座体系完整且具有浓厚地方特色的庙宇建筑。现在的祖庙算是来佛山必游的经典景点，是佛山的一张明信片。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/49949.html" data-appurl="https://you.ctrip.com/sight/foshan207/49949.html" class="imgW J_link">
+                                            <img src="img/block3_04.jpg" alt="">
+                                            <span class="des">南风古灶位于佛山市著名的南国陶都石湾，拥有全国一流的陶瓷艺术博物馆、世界最大的陶瓷人物雕塑《陶女》所在的陶瓷公园、妙趣横生的陶瓷一条街以及放养着上千只孔雀的绿洲孔雀园。这一系列区域占地面积辽阔，集旅游、观光、生产、习艺、购物于一体。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/shundedistrict120098/122474.html" data-appurl="https://you.ctrip.com/sight/shundedistrict120098/122474.html" class="imgW J_link">
+                                            <img src="img/block3_05.jpg" alt="">
+                                            <span class="des">佛山的逢简水乡堪称岭南水乡一绝，即便与闻名遐迩的江南水乡相比也不遑多让，有“广东周庄之称”。水乡地处杏坛镇北端，绕村居水道逾10公里，辖区水道达28公里之多。游人泛舟荡漾碧波之中，大有曲折迂回无穷无尽之感。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/140538.html" data-appurl="https://you.ctrip.com/sight/foshan207/140538.html" class="imgW J_link">
+                                            <img src="img/block3_06.jpg" alt="">
+                                            <span class="des">盈香生态园位于佛山高明区荷城街道凌云山麓，环山而抱，山间淙淙流水，山上绿树成荫，果园花香四溢，果实累累挂枝头。这里集农业观光、休闲娱乐、科普教育、拓展训练于一体，是理想的度假胜地。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/23207.html" data-appurl="https://you.ctrip.com/sight/foshan207/23207.html" class="imgW J_link">
+                                            <img src="img/block3_07.jpg" alt="">
+                                            <span class="des">三水森林公园位于佛山市三水区西南镇北郊，园内有华南地区最大的孔圣园，还有鳄鱼湖动物园、大卧佛、无情谷、鸳鸯湖、情人谷、重阳古道等景点。这里树林密布、空气清新。
+                                                还拥有酒店、度假村、滑草场、卡丁赛车场、烧烤场等设施，是旅游度假的好去处。</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-url="https://you.ctrip.com/sight/foshan207/23211.html" data-appurl="https://you.ctrip.com/sight/foshan207/23211.html" class="imgW J_link">
+                                            <img src="img/block3_08.jpg" alt="">
+                                            <span class="des">国家4A级旅游景区南海影视城是中央电视台直属影视摄制基地。景区由天朝宫殿区、江南水乡区、港澳文化区和休闲娱乐区组成。天朝宫殿群展现了皇宫的恢弘气势。青砖黛瓦的江南水乡荟萃了徽派和浙派建筑的精髓。港澳文化区由岭南特色、哥特式建筑特色和旧时葡式建筑风格的澳门景观组成，成为新晋网红打卡点。
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="botW">
+                                    <li>西樵山</li>
+                                    <li>长鹿休博园</li>
+                                    <li>佛山祖庙</li>
+                                    <li>南风古灶</li>
+                                    <li>逢简水乡</li>
+                                    <li>盈香生态园</li>
+                                    <li>三水森林公园</li>
+                                    <li>南海影视城</li>
+                                    <li><a href="javascript:;" data-url="https://m.ctrip.com/webapp/you/sight/207.html" data-appurl="https://m.ctrip.com/webapp/you/sight/207.html" class="J_link">查看更多</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="FSBlock4">
+                    <div class="titW">
+                        <img src="img/block4_tit.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="pr">
+                            <img src="img/block1_bg2.png" alt="" class="bg">
+                            <div class="wrap">
+                                <div class="title">佛山是美食之乡，是粤菜发源地之一，民间素有“食在广州，厨出凤城”的美誉</div>
+                                <div class="slickW">
+                                    <div class="item">
+                                        <div class="flexW">
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_01.png" alt="">
+                                                </div>
+                                                <div class="tit">谭家菜</div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_02.png" alt="">
+                                                </div>
+                                                <div class="tit">顺德鱼生</div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_03.png" alt="">
+                                                </div>
+                                                <div class="tit">毋米粥</div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_04.png" alt="">
+                                                </div>
+                                                <div class="tit">炒牛奶</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="flexW">
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_05.png" alt="">
+                                                </div>
+                                                <div class="tit">启香鸡</div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_06.png" alt="">
+                                                </div>
+                                                <div class="tit">双皮奶</div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_07.png" alt="">
+                                                </div>
+                                                <div class="tit">陈村粉</div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="imgW">
+                                                    <img src="img/block4_08.png" alt="">
+                                                </div>
+                                                <div class="tit">伦教糕</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <div class="item">
+                                    <div class="flexW">
+                                        <div class="box">
+                                            <div class="imgW">
+                                                <img src="img/block4_09.png" alt="">
+                                            </div>
+                                            <div class="tit">扎蹄</div>
+                                        </div>
+                                        <div class="box">
+                                            <div class="imgW">
+                                                <img src="img/block4_10.png" alt="">
+                                            </div>
+                                            <div class="tit">盲公饼</div>
+                                        </div>
+                                        <div class="box">
+                                            <div class="imgW">
+                                                <img src="img/block4_11.png" alt="">
+                                            </div>
+                                            <div class="tit">九江煎堆</div>
+                                        </div>
+                                        <div class="box">
+                                            <div class="imgW">
+                                                <img src="img/block4_12.png" alt="">
+                                            </div>
+                                            <div class="tit">蛋散</div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="FSBlock5">
+                    <div class="titW">
+                        <img src="img/block5_tit.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="pr">
+                            <img src="img/block1_bg2.png" alt="" class="bg">
+                            <div class="wrap">
+                                <div class="slickW">
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_01.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">岭南天地（古韵潮玩）</div>
+                                            <div class="desc">岭南风蕴，一轴延展，夜幕降临，华灯齐放。古城新街、创意手作、非遗展示、新潮玩品、传统老字号。</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_03.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">佛山创意园（禅夜未央）</div>
+                                            <div class="desc">
+                                                <p>不夜城宵夜街、功夫广场、泡泡广场、爱情广场、陶文化广场.....</p>
+                                                <p>在这里，有街头演出、蹦迪嗨唱、酷乐浪潮带来的激情碰撞。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_04.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">桂城千灯湖商圈（潮涌灯湖）</div>
+                                            <div class="desc">
+                                                <p>千灯湖环宇城、万达广场、保利水城、三孔桥、杉林品茗园、千灯水亭……</p>
+                                                <p>是这座城市美食与时尚的风向标。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_05.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">西樵听音湖（文翰樵山）</div>
+                                            <div class="desc">听音湖畔，樵山瀑影，一幕水墨岭南。流光溢彩飞鸿馆，文化殿堂岭南玉阁，
+                                                观景圣地云影琼楼，文明灯塔故里寻源。
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_06.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">佛罗伦萨小镇（名品长廊）
+                                             </div>
+                                            <div class="desc">纯意大利风情建筑风格的小镇里，汇集了各大高端品牌折扣店。
+                                                在充满异域风情的购物天堂，行至广场中央，驻足欣赏音乐喷泉。
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_07.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">华侨城欢乐海岸plus</div>
+                                            <div class="desc">让人尖叫刺激的机动游戏项目尽兴玩，华侨城文旅融合新标杆，粤港澳大湾区最佳城央旅游项目。</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_08.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">渔人码头（日暮渔火）</div>
+                                            <div class="desc">蓝白相间的灯塔尤其亮眼，变幻的灯光点亮着平静的江面。
+                                                别具一格的街头涂鸦、临江延伸的灯光石街，藏着顺德的最美旧时光。</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_09.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">顺峰山公园（顺峰光影）</div>
+                                            <div class="desc">顺德中心城区的“绿肺”和天然氧吧。
+                                                有高达5m的“大柠檬”、随着落日余晖下的山湖美景、皎洁月色下的特色灯光秀。</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_10.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">美的鹭湖森林度假区（美的鹭湖）</div>
+                                            <div class="desc">在法式小镇吃饱喝足后，到半山温泉洗去疲惫，在营地安营扎寨体验户外露营，
+                                                或是在宁静的别墅中伴随着沙沙树响进入梦乡。</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_11.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">左岸公园（淼城绿岸）</div>
+                                            <div class="desc">两岸楼宇霓虹交织，左岸风光，沿河涌蜿蜒。
+                                                宽阔平坦的堤岸绿道、美华灯下的左岸公园，绿树环抱，城景交融。</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block5_12.png" alt="">
+                                        </div>
+                                        <div class="textW">
+                                            <div class="title2">三龙湾游船</div>
+                                            <div class="desc">泛舟江上，微风拂面。
+                                                游览东平大桥、两馆一厅、灯笼沙、潭洲国际会展中心、德国小镇、龙舟广场等滨河景观，一览无遗。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="FSBlock6">
+                    <div class="titW">
+                        <img src="img/block6_tit.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="pr">
+                            <img src="img/block1_bg2.png" alt="" class="bg">
+                            <div class="flexW">
+                                <div class="slickW">
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block6_01.png" alt="">
+                                            <div class="textW">
+                                                <img src="img/block6_tit_01.png" alt="">
+                                                <div class="des">行通济是元宵节期间举行的游玩祈福活动。每到这一天，家家户户都会扶老携幼，自清晨到夜幕，举着风车、摇着风铃、提着生菜浩浩荡荡地由北到南走过通济桥，祈求来年平平安安、顺顺利利。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block6_02.png" alt="">
+                                            <div class="textW">
+                                                <img src="img/block6_tit_02.png" alt="">
+                                                <div class="des">出秋色，又称秋色赛会，秋色提灯会，佛山秋色，俗称秋色会景，是佛山民间传统风俗。基本举行于每年秋收之后，其内容和形式，主要以反映农业丰收象征的农副鱼产品像生工艺品和以假乱真的手工业制品的展示，以及以“扮故事”为主的各种文艺表演与民间娱乐节目，举行综合性的大规模巡游活动。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block6_03.png" alt="">
+                                            <div class="textW">
+                                                <img src="img/block6_tit_03.png" alt="">
+                                                <div class="des">扒龙舟即是划龙舟，佛山龙舟文化历史悠久，各村落龙舟活动精彩纷呈。禅城张槎大江游彩龙、南海九江龙舟结阿契、盐步老龙礼俗、叠滘龙舟漂移、顺德龙眼村龙舟点睛、三水白坭五人龙舟赛……形成万“龙”齐放的良好局面。
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block6_04.png" alt="">
+                                            <div class="textW">
+                                                <img src="img/block6_tit_04.png" alt="">
+                                                <div class="des">中国醒狮分为南北两支，佛山就是南狮(也即民间所说的“醒狮”)的发源地，黄飞鸿醒狮的特点就是将他的武术动作融入到舞狮当中，可以说有武馆的地方就有醒狮，有醒狮就有武馆。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block6_05.png" alt="">
+                                            <div class="textW">
+                                                <img src="img/block6_tit_05.png" alt="">
+                                                <div class="des">佛山是武术之城，是中国南派武术的主要发源地。明初，佛山武术已相当普及。清末民初，佛山武术流派纷呈，涌现出一批有国际影响的武术家和武术组织，现在世界上广泛流行的蔡李佛拳，洪拳（代表人物有黄飞鸿、黄麒英），咏春拳等不少拳种和流派其跟都在佛山。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="imgW">
+                                            <img src="img/block6_06.png" alt="">
+                                            <div class="textW">
+                                                <img src="img/block6_tit_06.png" alt="">
+                                                <div class="des">佛山是粤剧的发源地，粤剧最早的行会组织——琼花会馆就建在佛山。在佛山祖庙，有一座华南地区最著名的古戏台——万福台。、现在，佛山还盛行有“私伙局”，粤剧爱好者自发组织，吹拉弹唱，怡然自乐。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="section">
+                <div class="FSBlock7">
+                    <div class="titW">
+                        <img src="img/block7_tit.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="slickW">
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_01.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_02.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_03.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_04.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_05.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_06.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_07.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_08.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_09.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="img/block7_10.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="FSBlock8">
+                    <div class="titW">
+                        <img src="img/block8_title.png" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="wrap">
+                            <img src="img/block1_bg2.png" alt="" class="bg">
+                            <div class="tagW">
+                                <ul class="botW">
+                                    <li>酒  店</li>
+                                    <li>民  宿</li>
+                                    <li>门  票</li>
+                                </ul>
+                                <ul class="topW">
+                                    <li>
+                                        <div class="flexW">
+                                            <a href="https://hotels.ctrip.com/hotel/391755.html" class="imgW">
+                                                <img src="img/block8_jd01.png" alt="">
+                                                <div class="tag">
+                                                    <span>网红酒店</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">岭南天地马哥孛罗酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+    
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/427470.html" class="imgW">
+                                                <img src="img/block8_jd02.png" alt="">
+                                                <div class="tag">
+                                                    <span>无敌城景</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">佛山恒安瑞士大酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/430401.html" class="imgW">
+                                                <img src="img/block8_jd03.png" alt="">
+                                                <div class="tag">
+                                                    <span>经典五星</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">佛山皇冠假日酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/662335.html" class="imgW">
+                                                <img src="img/block8_jd04.png" alt="">
+                                                <div class="tag">
+                                                    <span>三水优选</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">佛山金太阳酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/374875.html" class="imgW">
+                                                <img src="img/block8_jd05.png" alt="">
+                                                <div class="tag">
+                                                    <span>美食之旅</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">佛山顺德喜来登酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/478621.html" class="imgW">
+                                                <img src="img/block8_jd06.png" alt="">
+                                                <div class="tag">
+                                                    <span>商务出行</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">顺德金茂华美达广场酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/13410477.html" class="imgW">
+                                                <img src="img/block8_jd07.png" alt="">
+                                                <div class="tag">
+                                                    <span>拥抱自然</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">趣墅度假别墅<span>（美的鹭湖店）</span></div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/35502081.html" class="imgW">
+                                                <img src="img/block8_jd08.png" alt="">
+                                                <div class="tag">
+                                                    <span>靠近景区</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">西樵山希尔顿欢朋酒店</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flexW">
+                                            <a href="https://hotels.ctrip.com/hotel/6781105.html" class="imgW">
+                                                <img src="img/block8_ms01.png" alt="">
+                                                <div class="tag">
+                                                    <span>民国风情</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">佛山逢简梁公馆</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/56600736.html" class="imgW">
+                                                <img src="img/block8_ms02.png" alt="">
+                                                <div class="tag">
+                                                    <span>亲子玩乐</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">佛山欢乐海岸公寓</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/12677508.html" class="imgW">
+                                                <img src="img/block8_ms03.png" alt="">
+                                                <div class="tag">
+                                                    <span>岭南特色</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">花筑·逢简润岚雅居民宿</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://hotels.ctrip.com/hotel/48603200.html" class="imgW">
+                                                <img src="img/block8_ms04.png" alt="">
+                                                <div class="tag">
+                                                    <span>休闲度假</span>
+                                                </div>
+                                                <div class="textW">
+                                                    <div class="tit">鑫泊美的鹭湖度假公寓</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flexW">
+                                            <a href="https://you.ctrip.com/sight/foshan207/76192.html" class="imgW">
+                                                <img src="img/block8_mp05.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">长鹿旅游休博园</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/49949.html" class="imgW">
+                                                <img src="img/block8_mp06.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">南风古灶</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/23210.html" class="imgW">
+                                                <img src="img/block8_mp07.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">西樵山风景名胜区</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/5638370.html" class="imgW">
+                                                <img src="img/block8_mp08.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">顺德欢乐海岸PLUS</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/23211.html" class="imgW">
+                                                <img src="img/block8_mp01.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">南海影视城</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/140538.html" class="imgW">
+                                                <img src="img/block8_mp02.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">高明盈香生态园</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/110076.html" class="imgW">
+                                                <img src="img/block8_mp03.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">南丹山森林王国</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <a href="https://you.ctrip.com/sight/foshan207/140537.html" class="imgW">
+                                                <img src="img/block8_mp04.png" alt="">
+                                                <div class="textW">
+                                                    <div class="tit">三水芦苞温泉</div>
+                                                    <div class="price">¥888</div>
+                                                </div>
+                                            </a>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                        </div>
+    
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script src="js/ctshare.js"></script>
+
+<script>
+    window.onresize = getRem;
+    function getRem(){
+        if($(window).width()>750){
+            document.documentElement.style.fontSize = '100px';
+        }else{
+            document.documentElement.style.fontSize = document.documentElement.offsetWidth / 7.5+'px';
+        }
+    }
+    getRem();
+
+    /* 此处可使用自定义函数 */
+    (function () {
+
+        // 此处为使用原生举例
+        function jump(e) {
+            if (e && e.currentTarget) {
+                var h5Url = e.currentTarget.getAttribute('data-url')
+                var appUrl = e.currentTarget.getAttribute('data-appurl')
+                ctrip.jump({
+                    h5Url,
+                    appUrl
+                })
+            }
+        }
+        document.querySelectorAll('.J_link').forEach(item => {
+            item.addEventListener('click', jump)
+        })
+    })()
+</script>
+<script>
+
+    $(function(){
+
+        $('#FSMain').fullpage({
+            //设置颜色参数
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+            //定义锚链接
+            menu: '.FSMenu',
+            //绑定菜单，设定的相关属性与 anchors 的值对应后，菜单可以控制滚动
+            scrollOverflow: true,
+            afterRender: function() {
+                $('#loading').fadeOut(300,function(){
+                    $('#loading').remove();
+                })
+            },
+            afterLoad:function(origin, destination, direction){
+                $('#FSMain .section').eq(destination.index).find($("[data-animation]")).each(function(){
+                    let ani = $(this).attr('data-animation');
+                    let delay = $(this).attr('data-delay')!=undefined?$(this).attr('data-delay')*0.2:0;
+                    let _this = $(this);
+                    if(!$(this).attr('animation-status')){
+                        $(this).attr('animation-status','true');
+                        $(this).css({
+                            'visibility':'visible',
+                            'animationName':ani,
+                            'animationDelay':delay+'s'
+                        });
+                    }
+                });
+            }
+        });
+
+        $.ajax({
+            url: 'https://m.ctrip.com/restapi/soa2/13503/queryProduct',
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify({
+                "paramList": [
+                    {
+                    "departCityID": 207,
+                        "productIDList": [391755, 427470, 430401, 662335,374875,478621,13410477,35502081,6781105,56600736,12677508,48603200],
+                    "businessType": "HOTEL",
+                    },
+                    {
+                    "departCityID": 207,
+                        "productIDList": [76192, 49949, 23210, 5638370,23211,140538,110076,140537],
+                    "businessType": "GTTD",
+                    }
+                ]
+            }),
+            success: function(response) {
+                var page_num = 8;
+                $('.FSBlock8 .topW li').each(function(j){
+                    $(this).find('.imgW').each(function(i){
+                        var h5Url,appUrl,price=0,data;
+                        if(j==0){
+                            data = response.products[0].productList[i];
+                        }else if(j==1){
+                            data = response.products[0].productList[i+page_num];
+                        }else{
+                            data = response.products[1].productList[i];
+                        }
+                        h5Url = data.h5Url;
+                        appUrl = data.appUrl;
+                        price = data.price;
+                        $(this).attr('data-url',h5Url);
+                        $(this).attr('data-appurl',appUrl);
+                        $(this).find('.price').text('¥' + price);
+                    });
+
+                });
+
+            }
+
+        });
+
+        $('.FSBlock2 .slickW').slick({
+            arrows:true,
+            dots:false,
+            cssEase:'cubic-bezier(0.7, 0, 0.3, 1)',
+            speed:500,
+            onAfterChange:function(){
+                let index = $('.FSBlock2 .slickW').slickCurrentSlide();
+                $('.FSBlock2 .rightW img').eq(index).show().siblings().hide();
+            }
+        });
+
+        $('.FSBlock3 .botW li').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.FSBlock3 .topW li').eq($(this).index()).show().siblings().hide();
+        });
+        $('.FSBlock3 .botW li').eq(0).trigger('click');
+
+        $('.FSBlock4 .slickW').slick({
+            dots: true,
+            cssEase:'cubic-bezier(0.7, 0, 0.3, 1)',
+            arrows:false
+        });
+
+        $('.FSBlock5 .slickW').slick({
+            dots: true,
+            cssEase:'cubic-bezier(0.7, 0, 0.3, 1)',
+            arrows:true
+        });
+
+        $('.FSBlock6 .slickW').slick({
+            dots: true,
+            cssEase:'cubic-bezier(0.7, 0, 0.3, 1)',
+            arrows:true
+        });
+
+        $('.FSBlock7 .slickW').slick({
+            dots: true,
+            cssEase:'cubic-bezier(0.7, 0, 0.3, 1)',
+            arrows:true
+        });
+
+        $('.FSBlock8 .botW>li').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.FSBlock8 .topW>li').eq($(this).index()).show().siblings().hide();
+        });
+        $('.FSBlock8 .botW>li').eq(0).trigger('click');
+
+    });
+</script>
+
+<input type='hidden' id='page_id' value='10650046245' />
+<script src="//webresource.c-ctrip.com/code/ubt/_mubt.min.js"></script>
+<script>
+    /* 此处可使用自定义函数 */
+    (function () {
+        // 设置APP的标题
+        ctrip.setTitle('岭南味 佛山品')
+        // 设置分享
+        ctrip.setShare({
+            icon: 'https://youimg1.c-ctrip.com/target/0104h1200084rbv2zD984_D_800_600.jpg',
+            title: '岭南味 佛山品',
+            desc: '佛山素有陶艺之乡、粤剧之乡、武术之城、广纱中心、岭南成药之乡、南方铸造中心、民间艺术之乡、美食之乡等美誉，形成了行通济、佛山秋色、扒龙舟等独具特色的民俗文化。',
+            href: location.href
+        })
+    })()
+</script>
+</body>
+</html>
