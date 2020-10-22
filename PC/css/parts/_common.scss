@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+html { font-size: $FontSizeBody; }
+
+body { @include fontFamily; color:#555; line-height:1.5714; font-size:$FontSizeBody;  -webkit-font-smoothing: antialiased; font-smooth: always; -moz-osx-font-smoothing: grayscale;}
+
+a { text-decoration:none; color:#555;}
+
+*:before , *:after{ text-align:inherit; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+
+input[type="text"] ,input[type="password"] , textarea{ text-align:left; background:transparent;
+	&:focus , &.focusOn //, &:valid
+	{ background:#fff; }
+}
+
+a , a:before ,  a:after{@extend %transition;}
+.inner , img , input , textarea , select , button, table , label{ @extend %inner;}
+input , textarea , select , button , label { @include tst(all 0.2s ease 0s);}
+
+
+%center{ margin-left:auto; margin-right:auto; @extend %inner;max-width: $cw;}
+.center{ @extend %center;
+}
+
+i{font-style:normal;}
+
+img{ vertical-align: bottom;}
+
+a[href^="mailto:"] , a[href^="tel:"]{ display:inline-block;}
+
+table{ line-height: 1.5; width: 100%;}
+
+table.table-left{
+	td,th{ text-align:left; }
+}
+
+.addthis_sharing_toolbox{ white-space: nowrap;}
+
+#menuBtn
+{ @include whl(42px,42px,true); cursor:pointer; z-index:99999;display: none;position: relative;
+	text-shadow:1px 1px 1px black(0.3);  border-radius: 3px;
+	//opacity:1;
+
+	&:before{ font-family:icomoon; color:#fff;}
+	&.active{ //opacity:0.7;
+		&:before{ content:'\e60b'; font-size:24px;color:#000;}
+	}
+}
+#menuBtn{
+	&:before{ content:'\e637'; font-size:36px;}
+}
+
+/*图片不超出容器居中*/
+.ij1{max-height: 100%;width:auto;height:auto;position: absolute;top:50%;left:50%;@include jz((-50%,-50%,0));}
+
+/*图片高度百分百,宽度自适应，铺满容器居中*/
+.ij2{height: 100%;max-width:none;width:auto;position: absolute;top:0;left:50%;@include jz((-50%,0,0));}
+
+/*图片铺满容器居中*/
+.ij3{min-width:100%;min-height: 100%;max-width:none;width:auto;height:auto;position: absolute;top:50%;left:50%;@include jz((-50%,-50%,0));}
+
+/*翻页*/
+.turnPage{@include flex;
+	a{width:50%;background: #000;position: relative;overflow: hidden;min-height: 400px;@include flex;align-items: center;color:#fff;padding: 0 80px;@include innerBox;
+		&:hover{
+			.ij3{@include opacited(.5);}
+			i:after{width:40px;}
+		}
+	}
+	.pre{text-align: left;
+		i{right:100%;margin-right: 10px;
+			&:before{content:"\e625";right:100%;margin-right: -6px;}
+		}
+	}
+	.next{text-align: right;
+		i{left:100%;margin-left: 10px;
+			&:before{content:"\e628";left:100%;margin-left: -6px;}
+		}
+	}
+	.ij3{@include opacited(.8)}
+	.textW{position: relative;width:100%;}
+	.name{font-weight: bold;display: block;text-transform: uppercase;font-size: 16px;}
+	.tit{display: block;font-size: 24px;text-transform: capitalize;margin-top: 20px;}
+	i{position: absolute;top:11px;
+		&:before{content:"";font-family: icomoon, Arial, Helvetica, Microsoft YaHei, SimSun, Sans-serif;position: absolute;top:-11px;font-size: 16px;}
+		&:after{content:"";width:10px;height:1px;background: #fff;display: inline-block;@include tst(.3s all ease);}
+	}
+}
+@include rsp(875px){
+	.turnPage a{padding: 0 60px;}
+	.turnPage .name{font-size: 14px;}
+	.turnPage .tit{font-size: 20px;}
+}
+@include rsp(600px){
+	.turnPage a{width:100%;min-height: 300px;}
+}
+//search
+.searchForm{ position:relative; max-width:100%; @extend %inner;
+	.search{ width:100%; border:0px none; }
+	.searchBtn{ border:0px none;  position:absolute; top:0; right:0; text-align:center;}
+}
+
+//gotop
+#goTop { position: fixed; @include whl(48px,48px,true); color: #fff; font-size:20px; background:#000; @include opacited(0.6); bottom: 10px; right: 10px;  overflow:hidden; display: none; cursor:pointer; @extend %transition; z-index:999;border-radius: 50%;
+	&:before { content: '\e665'; font-family: 'icomoon';  text-align:inherit;}
+	&:hover{ opacity:0.7; }
+	@include rsp(875px){
+		margin-bottom:50px;
+	}
+}
+
+//必须
+//layout
+.justify { @extend %justify; }
+//clearfix
+.clearfix { @extend %clearfix; }
+
+
+//必须
+//google
+iframe[name='google_conversion_frame'] {height: 0 !important; width: 0 !important; line-height: 0 !important; font-size: 0 !important; margin-top: -13px; float: left; }
+object[id^="tq_as"]{ overflow:hidden; margin:0; height:0 !important;}
+#div_ser table{
+	td,th{ border:0px none;}
+}
+
+[data-animation]{visibility: hidden;animation-duration:1.5s;
+	-webkit-animation-duration:1.5s;opacity: 0;animation-fill-mode:forwards;}
+

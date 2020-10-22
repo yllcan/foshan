@@ -1,0 +1,160 @@
+@charset "utf-8";
+//footerToolBar
+
+body.clear{ overflow:hidden;}
+$toolBarColor:#232323;
+
+#footerToolBar{ position:fixed; bottom:0; left:0; right:0; width:100%; height:48px; background:darken($colorH,5%); border-top:1px solid rgba(255,255,255,0.2); @extend %transition; display:none;  z-index:999;
+
+	#footerBarClose{ width:remNpx(100px); height:24px; position:absolute; top:-24px; left:50%; margin-left:remNpx(-50px);
+		cursor:pointer; display:none;
+
+		&:before{@include iconF('\e626',12px); color:#fff; text-align:center; line-height:20px;
+			position:absolute; bottom:0; left:0; width:100%; height:20px; // @include bordered(1px,solid,rgba(255,255,255,0.2),3);
+			background:$toolBarColor; @include rounded(4px 4px 0px 0px); }
+	}
+
+	li{ @extend %inner; width:20%; height:remNpx(45px); float:left; text-align:center;  border-color:#fff;
+		border-left:1px solid rgba(255,255,255,0.2); cursor:pointer; margin-top:remNpx(2px);
+
+		a{ display:block; height:remNpx(45px); color:#fff; font-size:remNpx(12px); line-height:1; text-transform:capitalize;
+			@include opacited(0.8); padding-top:1px; @extend %inner;
+
+			&:before{content:''; width:remNpx(30px); height:remNpx(20px); margin:remNpx(4px auto); display:block;
+				background:url(../img/footerbox/footer-tool.png) no-repeat; background-size:149px; }
+		}
+
+		&:first-child{ border-left:0px none;}
+	}
+	.footerBarPro a:before{background-position:-120px 0px;}
+	.footerBarTel a:before{background-position:-90px 0px;}
+	.footerBarEmail a:before{background-position:0px 0px;}
+	.footerBarMessage a:before{background-position:-30px 0px;}
+	.footerBarShare a:before{background-position:-60px 0px;}
+
+	&.close{ bottom:remNpx(-43px);
+		#footerBarClose:before{ content:'\e627';}
+	}
+
+}
+
+.toolMask{ background:#f7f7f7; position:fixed; width:100%; height:100%; top:0; left:0; display:none;
+	overflow-x:hidden; overflow-y:hidden; z-index:1200; margin-left:100%; @extend %transition;
+
+	&, a{ color:#333;}
+
+	&.moveLeft{ margin-left:0; }
+
+	.toolTop{ position:absolute; top:0; left:0; right:0; width:100%; height:remNpx(46px); line-height:remNpx(45px); font-size:remNpx(18px);
+		text-align:center; @extend %textUpper;
+		border-bottom:1px solid #ddd; background:#fcfcfc;  padding-right:remNpx(32px); @extend %inner;
+	}
+	.toolContent{ position:absolute; top:remNpx(45px); width:100%; left:0; bottom:remNpx(5px); overflow-y:scroll; background:#f7f7f7;
+		>ul>li { border-top:1px solid #fff; border-bottom:1px solid #ddd; font-size:remNpx(14px); line-height:1.2;
+			text-transform:capitalize; position:relative;
+
+
+
+			a{ display:block; padding-top:remNpx(12px); padding-bottom:remNpx(12px); padding-right:remNpx(20px);
+				//&:hover{ color:$color;}
+			}
+			>a{ padding-left:remNpx(20px); }
+
+
+			&.selected{ background:#eee; border-bottom:3px solid #dadada;
+				>a{ background:#eee; font-weight:bold;
+					//&:after{ content:'\e623';}
+				}
+			}
+
+			&.hasUl>a:after{ content:'\e622'; font-family:icomoon; color:#999; font-size:remNpx(18px); position:absolute;
+				@include whf(12px,18px,true); right:remNpx(10px); top:remNpx(13px); font-weight:normal;}
+
+			ul { display:none;
+				li{ border-top:1px dotted #ccc; font-size:remNpx(12px);
+					a{ padding-left:remNpx(36px);}
+				}
+			}
+		}
+
+		.ToolListTitle{ font-size:remNpx(15px); @extend %textUpper; padding:remNpx(10px); font-weight:bold; background:#e4e4e4;}
+
+		>ul:last-child{ padding-bottom:remNpx(15px);
+			&:last-child{ padding-bottom:remNpx(30px);}
+		}
+
+	}
+
+	#toolCloseBtn{position:absolute; right:0; top:0;  width:remNpx(55px); height:remNpx(42px);
+		cursor:pointer; z-index:1210;
+
+		&:before{ @include iconF('\e60e',14px); @include whf(32px,32px,true); @include rounded();  color:#fff; background:#aaa;
+			position:absolute; top:remNpx(5px); right:remNpx(5px); }
+		&:hover:before { background:#bbb;}
+	}
+
+}
+
+
+
+//chatBox
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('../img/footerbox/bebas.eot');
+    src: url('../img/footerbox/bebas.eot#iefix') format('embedded-opentype'),
+         url('../img/footerbox/bebas.woff') format('woff'),
+         url('../img/footerbox/bebas.ttf') format('truetype'),
+         url('../img/footerbox/bebas.svg#BebasRegular') format('svg');
+	font-weight: normal;
+    font-style: normal;
+}
+#chatToolBox{ position:fixed; width:110px; bottom:90px; right:-5px; text-transform: capitalize;
+	font-family:Arial, Helvetica,'Microsoft YaHei', SimSun,Sans-serif; color:#fff; z-index:990; @extend %transition;
+
+	a { text-decoration:none; color:#fff; text-align:center; display:block; padding-left:5px; padding-right:5px;}
+	&,h3,ul,li{ margin:0; padding:0; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+	i{ font-style:normal;}
+
+	li{ list-style:none; padding-right:5px;}
+
+	#chatToolMail a{ font-size:40px; line-height:1.1; letter-spacing:-1px; padding-top:28px; padding-bottom:22px; 
+    	 font-family:BebasRegular ,'Arial Narrow' ,Arial, Helvetica, 'Microsoft YaHei', SimSun, Sans-serif;}
+
+	.chatToolContact{ font-size:16px; line-height:1.25; background:#444444; margin-top:5px; text-transform:capitalize;
+		a{ padding-top:8px; padding-bottom:8px;}
+	}
+
+	&:hover{ right:0;}
+
+	//click hide
+	#chatToolMail i{ position:absolute; top:0; width:100%; height:28px; line-height:28px; text-align:center;
+		background:transparent; cursor:pointer;
+
+    	&:before{content:'\e63d'; font-size:24px; font-family:icomoon;}
+    }
+
+	&.hiddenRight{right:-110px; padding-left:28px;
+		#chatToolMail i{ width:28px; height:60px; line-height:60px; left:0; background:inherit; top:20px;
+			&:before{content:'\e625';}
+		}
+	}
+}
+
+#chatToolMail{ background:#0865a7;}
+
+
+
+@media screen and (max-width:768px){
+	#chatToolBox{ display:none;}
+}
+
+.sitemap{
+	dt{ background:$colorBlue; color:#fff;  font-size:18px; line-height:1; @extend %textC;
+		a{ color:#fff; display:inline-block; padding:8px 12px;}
+	}
+	dd{ padding:4px; background:#eee;
+		a{ color:#333; }
+		p{ font-weight:bold; padding:5px 10px 5px 20px; line-height:1.2; }
+		ul{ padding-left:30px;}
+	}
+}
